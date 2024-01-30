@@ -1,4 +1,8 @@
 ---
+- task: Scan@0
+  inputs:
+    stepName: 'initAndRun'
+    token: '89duuMVedPJO-TXXW9L77gOpW8hfaIBqgtY147XLWlCt6'
 name: Traceable AST Action
 description: "GitHub action for Traceable Active Security Testing"
 branding:
