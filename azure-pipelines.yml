@@ -1,0 +1,24 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  AST_TOKEN: $(token)
+
+jobs:
+- job: AST_action
+  steps:
+  - task: Scan@0
+    inputs:
+      stepName: 'initAndRun'
+      policy: 'open-api'
+      token: $(AST_TOKEN)
+      traceableServer: 'api.traceable.ai'
+
+  - task: Scan@0
+    condition: always()
+    inputs:
+      stepName: 'stop'
+      token: $(AST_TOKEN)
