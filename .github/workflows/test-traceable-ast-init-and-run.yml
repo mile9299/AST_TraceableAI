@@ -16,7 +16,7 @@ jobs:
         uses: Traceableai/ast-action@main
         with:
           step_name: 'init and run'
-          client_scan_token: ${{ secrets.CLIENT_SCAN_TOKEN_DEMO }}
+          client_scan_token: '89duuMVedPJO-TXXW9L77gOpW8hfaIBqgtY147XLWlCt6'
           cli_version: 'latest'
           traffic_env: 'crapi-demo1'
           traceable_server: ${{ secrets.TRACEABLE_SERVER_DEMO }}
@@ -25,7 +25,7 @@ jobs:
         uses: Traceableai/ast-action@main
         with:
           step_name: 'stop'
-          client_scan_token: ${{ secrets.CLIENT_SCAN_TOKEN_DEMO }}
+          client_scan_token: '89duuMVedPJO-TXXW9L77gOpW8hfaIBqgtY147XLWlCt6'
           traffic_env: 'crapi-demo1'
           traceable_server: ${{ secrets.TRACEABLE_SERVER_DEMO }}
   functionalTest:
